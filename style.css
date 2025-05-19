@@ -119,25 +119,26 @@ header {
     cursor: pointer;
     margin: 10px auto 20px;
     display: block;
-
-.help-text {
-    text-align: center;
-    font-size: 0.9em;
-    color: #1D4A69;
 }
 
-.help-text a {
-    color: #1D4A69;
-    text-decoration: underline;
-}
+    .help-text {
+        text-align: center;
+        font-size: 0.9em;
+        color: #1D4A69;
+    }
 
-footer {
-    margin-top: auto;
-    text-align: left;
-}
+    .help-text a {
+        color: #1D4A69;
+        text-decoration: underline;
+    }
 
-footer img {
-    width: 150px;
-    padding: 0;
-    margin-left: 200px;
-}
+    footer {
+        margin-top: auto;
+        text-align: left;
+    }
+
+    footer img {
+        width: 150px;
+        padding: 0;
+        margin-left: 200px;
+    }
