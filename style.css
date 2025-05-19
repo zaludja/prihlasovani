@@ -84,6 +84,19 @@ header {
     display: block;
 }
 
+.reset-btn{
+    background-color: #1D4A69;
+    color: white;
+    padding: 15px 50px;
+    border: none;
+    width: auto;
+    border-radius: 35px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px auto 20px;
+    display: block;
+}
 .divider {
     text-align: center;
     margin: 10px 0;
