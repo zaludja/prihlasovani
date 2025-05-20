@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moje Amber - Přihlášení</title>
-    <link rel="stylesheet" href="src/styles/main.scss"/>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moje Amber - Přihlášení</title>
+  <link rel="stylesheet" href="src/styles/main.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
-    <img src="images/kytka.svg" alt="Amber Plasma Logo" class="logo" />
+  <div class="container">
+    <img src="images/kytka.svg" alt="Amber Plasma Logo" class="logo"/>
+  </div>
 </header>
 
 <main>
-    <img src="images/moje_amber.svg" alt="Moje Amber Logo" class="main-logo" />
+  <img src="images/moje_amber.svg" alt="Moje Amber Logo" class="main-logo"/>
 
-    <form class="login-form">
-        <label for="email">Email *</label>
-        <input type="email" id="email" placeholder="Zadejte Váš email" required />
+  <form class="login-form">
+    <label for="email">Email *</label>
+    <input type="email" id="email" placeholder="Zadejte Váš email" required/>
 
-        <label for="password">Heslo *</label>
-        <div class="password-wrapper">
-            <input type="password" id="password" placeholder="********" required />
-            <span class="eye-icon">⌀</span>
-        </div>
+    <label for="password">Heslo *</label>
+    <div class="password-wrapper">
+      <input type="password" id="password" placeholder="********" required/>
+      <span class="eye-icon">⌀</span>
+    </div>
 
-        <a href="zapomenute_heslo.html" class="forgot-password">🔒 Zapomenuté heslo</a>
+    <a href="zapomenute_heslo.html" class="forgot-password">🔒 Zapomenuté heslo</a>
 
-        <button type="submit" class="login-btn">Přihlásit se</button>
+    <button type="submit" class="login-btn">Přihlásit se</button>
 
-        <div class="divider">nebo</div>
+    <div class="divider">nebo</div>
 
-        <button type="button" class="create-account-btn">
-            Vytvořit nový účet Moje Amber
-        </button>
+    <button type="button" class="create-account-btn">
+      Vytvořit nový účet Moje Amber
+    </button>
 
-        <p class="help-text">
-            Jste náš stávající dárce a nemůžete se přihlásit?
-            <a href="">Klikněte zde</a> a nastavte si heslo.
-        </p>
-    </form>
+    <p class="help-text">
+      Jste náš stávající dárce a nemůžete se přihlásit?
+      <a href="">Klikněte zde</a> a nastavte si heslo.
+    </p>
+  </form>
 </main>
 
 <footer>
-    <img src="images/ruka.svg" alt="Dekorace dole" class="logo-dole"/>
+  <img src="images/ruka.svg" alt="Dekorace dole" class="logo-dole"/>
 </footer>
 </body>
 </html>
