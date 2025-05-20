@@ -42,7 +42,7 @@ table {
   border-spacing: 0;
 }
 
-html {
+:root {
   --_bg: #CFDDE5;
   --_txt: #1D4A69;
   --_dev: #aaa;
