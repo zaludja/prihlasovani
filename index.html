@@ -6,6 +6,7 @@
   <title>Moje Amber - Přihlášení</title>
   <link rel="stylesheet" href="src/styles/main.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <header>
@@ -16,14 +17,15 @@
 
 <main>
   <img src="src/images/moje_amber.svg" alt="Moje Amber Logo" class="main-logo"/>
+  <div class="error-msg" id="formError" style="display: none"></div>
 
-  <form class="login-form">
+  <form class="login-form" id="loginForm">
     <label for="email">Email *</label>
-    <input type="email" id="email" placeholder="Zadejte Váš email" required/>
+    <input type="email" id="email" placeholder="Zadejte Váš email" />
 
     <label for="password">Heslo *</label>
     <div class="password-wrapper">
-      <input type="password" id="password" placeholder="********" required/>
+      <input type="password" id="password" placeholder="********" />
       <span class="eye-icon">⌀</span>
     </div>
 
@@ -47,5 +49,6 @@
 <footer>
   <img src="src/images/ruka.svg" alt="Dekorace dole" class="logo-dole"/>
 </footer>
+<script src="formscript.js"></script>
 </body>
 </html>
