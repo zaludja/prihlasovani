@@ -1,31 +1,52 @@
-document.getElementById("loginForm").addEventListener("submit", function (e) {
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("loginForm");
     const errorBox = document.getElementById("formError");
 
-    // Skryjeme starou chybu
-    errorBox.style.display = "none";
-    errorBox.textContent = "";
-
-    if (!isValidEmail(email)) {
-        e.preventDefault();
-        showError("Zadejte platnou e-mailovou adresu.");
-        return;
-    }
-
-    if (password === "") {
-        e.preventDefault();
-        showError("Zadejte heslo.");
-        return;
-    }
+    // Inicializace událostí
+    initFormValidation(form, errorBox);
 });
 
-function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+// Hlavní funkce pro nastavení validace
+function initFormValidation(form, errorBox) {
+    form.addEventListener("submit", (e) => {
+        const email = getInputValue("email");
+        const password = getInputValue("password");
+
+        clearError(errorBox);
+
+        if (!isValidEmail(email)) {
+            e.preventDefault();
+            showError(errorBox, "Zadejte platnou e-mailovou adresu.");
+            return;
+        }
+
+        if (password === "") {
+            e.preventDefault();
+            showError(errorBox, "Zadejte heslo.");
+            return;
+        }
+    });
 }
 
-function showError(msg) {
-    const errorBox = document.getElementById("formError");
-    errorBox.textContent = msg;
-    errorBox.style.display = "block";
+// Vrací ořezanou hodnotu vstupního pole podle ID
+function getInputValue(id) {
+    return document.getElementById(id).value.trim();
+}
+
+// Zobrazí chybovou zprávu
+function showError(box, message) {
+    box.textContent = message;
+    box.style.display = "block";
+}
+
+// Skryje chybovou hlášku
+function clearError(box) {
+    box.textContent = "";
+    box.style.display = "none";
+}
+
+// Validuje formát e-mailu
+function isValidEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
 }

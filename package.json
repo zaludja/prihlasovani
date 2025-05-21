@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +19,12 @@
   "homepage": "https://github.com/zaludja/prihlasovani#readme",
   "description": "",
   "dependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.1",
     "sass": "^1.89.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
   }
 }
